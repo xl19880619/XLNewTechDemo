@@ -8,17 +8,75 @@
 
 #import "AppDelegate.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import <UXAPM/UXAPMAgent.h>
+//#import "BaiduPanoramaView.h"
 
 @interface AppDelegate ()
+
+//@property (nonatomic, strong) BaiduPanoramaView *view;
 
 @end
 
 @implementation AppDelegate
 
+- (CGSize)getStringRect:(NSAttributedString *)aString size:(CGSize )sizes
+{
+    CGRect strSize = [aString boundingRectWithSize:CGSizeMake(sizes.width, sizes.height) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    return  CGSizeMake(strSize.size.width, strSize.size.height);
+}
+
+
+- (void)check {
+    NSArray *array1 = @[@3, @5, @7, @2, @1, @4];
+    NSArray *array2 = @[@3, @7, @6, @1, @5, @9, @8];
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSNumber *num1 in array1) {
+        for (NSNumber *num2 in array2) {
+            if (num1.integerValue == num2.integerValue) {
+                [result addObject:num1];
+            }
+        }
+    }
+    NSMutableArray *newResult1 = result.mutableCopy;
+    for (NSNumber *number in result) {
+        for (NSNumber *num1 in array1) {
+            if (num1.integerValue == number.integerValue) {
+                NSUInteger index = [result indexOfObject:number];
+                if (index > 1) {
+                    if ([array1 indexOfObject:num1] < [array1 indexOfObject:[result objectAtIndex:index - 1]]) {
+                        [newResult1 removeObject:num1];
+                    }
+                }
+            }
+        }
+    }
+    
+    NSMutableArray *newReulst2 = result.mutableCopy;
+    for (NSNumber *number in result) {
+        for (NSNumber *num2 in array2) {
+            if (num2.integerValue == number.integerValue) {
+                NSUInteger index = [result indexOfObject:number];
+                if (index > 1) {
+                    if ([array2 indexOfObject:num2] < [array2 indexOfObject:[result objectAtIndex:index - 1]]) {
+                        [newReulst2 removeObject:num2];
+                    }
+                }
+            }
+        }
+    }
+    
+    NSLog(@"result %@ n1:%@ n2:%@",result,newResult1,newReulst2);
+    //[3, 5, 7, 1]
+    //[3, 7, 1]
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [IQKeyboardManager sharedManager].enable = NO;
+    [self check];
+    [UXAPMAgent startWithAppId:@"111"];
+//    self.view
+    CGSize siz = [self getStringRect:nil size:CGSizeMake(CGFLOAT_MAX, 10)];
     return YES;
 }
 

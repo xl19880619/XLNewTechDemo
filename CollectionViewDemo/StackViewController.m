@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIButton *codeLoginButton;
 @property (nonatomic, strong) UIButton *douyinLoginButton;
 @property (nonatomic, strong) UIButton *appleLoginButton;
+
+@property (nonatomic, copy) void (^block) (void);
 @end
 
 @implementation StackViewController
@@ -70,10 +72,14 @@
     self.stackView.alignment = UIStackViewAlignmentCenter;
     self.stackView.axis = UILayoutConstraintAxisHorizontal;
     [self.view addSubview:self.stackView];
-    
+
     self.douyinSwitch.on = NO;
     self.osVersionSwitch.on = NO;
     [self reloadStackSubviews];
+}
+
+- (void)buttonAction {
+    
 }
 
 - (void)reloadStackSubviews {
@@ -89,11 +95,11 @@
         stackViewWidth += (138+20);
         [self.stackView addArrangedSubview:self.appleLoginButton];
     }
-    [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.stackView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view);
+        make.top.mas_equalTo(CGRectGetMaxY(self.osVersionLabel.frame) + 40);
         make.width.mas_equalTo(stackViewWidth);
         make.height.mas_equalTo(40);
-        make.centerX.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.osVersionLabel.mas_bottom).mas_offset(40);
     }];
 }
 

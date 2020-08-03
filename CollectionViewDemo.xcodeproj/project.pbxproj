@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BD14B17530BDE6E10497221 /* Pods_CollectionViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EBC72C318D60AFFF70BB6F /* Pods_CollectionViewDemo.framework */; };
+		2B038DB524D17BE70027D460 /* FHBuildingDetailShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DB424D17BE70027D460 /* FHBuildingDetailShadowView.m */; };
+		2B038DB824D17C2E0027D460 /* DetailCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DB724D17C2E0027D460 /* DetailCollectionViewLayout.m */; };
+		2B038DBF24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DBE24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m */; };
+		2B038DC224D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DC124D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m */; };
 		2B0592C92481445E006F0B3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592C82481445E006F0B3D /* AppDelegate.m */; };
 		2B0592CC2481445E006F0B3D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592CB2481445E006F0B3D /* SceneDelegate.m */; };
 		2B0592CF2481445E006F0B3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592CE2481445E006F0B3D /* ViewController.m */; };
@@ -17,16 +20,50 @@
 		2B0592DA24814462006F0B3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592D924814462006F0B3D /* main.m */; };
 		2B0592E22484ED37006F0B3D /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E12484ED37006F0B3D /* NotificationViewController.m */; };
 		2B0592E52484F928006F0B3D /* BTDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E42484F928006F0B3D /* BTDWeakProxy.m */; };
+		2B1A0B9224C0A3D3009D40FF /* F100BaiduMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */; };
+		2B1A0B9324C0A3D3009D40FF /* F100BaiduMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B34C616249CE483006B921B /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C614249CE483006B921B /* StackViewController.m */; };
 		2B34C617249CE483006B921B /* StackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B34C615249CE483006B921B /* StackViewController.xib */; };
 		2B34C61A249CE5BC006B921B /* CoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C619249CE5BC006B921B /* CoreInfoViewController.m */; };
 		2B34C61D249CE5DB006B921B /* LeftAlignedCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C61C249CE5DB006B921B /* LeftAlignedCollectionViewFlowLayout.m */; };
 		2B34C620249CE605006B921B /* CoreInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C61F249CE604006B921B /* CoreInfoCollectionViewCell.m */; };
 		2B34C623249CF3FB006B921B /* CoreInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C622249CF3FB006B921B /* CoreInfoModel.m */; };
+		2B34C626249F91A1006B921B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C625249F91A1006B921B /* DetailViewController.m */; };
+		2B34C629249F91AF006B921B /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C628249F91AF006B921B /* DetailCollectionViewCell.m */; };
+		2B832F3B24C54310008FD142 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B832F3A24C54310008FD142 /* libz.tbd */; };
+		2B832F3D24C54317008FD142 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B832F3C24C54316008FD142 /* libc++.tbd */; };
+		2B832F3F24C54324008FD142 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B832F3E24C54324008FD142 /* libsqlite3.0.tbd */; };
+		2B832F4124C5432E008FD142 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B832F4024C5432E008FD142 /* CoreGraphics.framework */; };
+		2BF8DD6224BCAF6700F1490C /* PanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6124BCAF6700F1490C /* PanoramaViewController.m */; };
+		2BF8DD6724BEFA4F00F1490C /* WASegmentedScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6324BEFA4F00F1490C /* WASegmentedScrollContentView.m */; };
+		2BF8DD6824BEFA4F00F1490C /* WASegmentedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6624BEFA4F00F1490C /* WASegmentedScrollViewController.m */; };
+		2BF8DD6B24BEFDE400F1490C /* WASegmentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6924BEFDE400F1490C /* WASegmentedController.m */; };
+		F305E61417E3A3CE2EAA02EF /* libPods-CollectionViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A243CE137AE9E529DD0FC6F /* libPods-CollectionViewDemo.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B1A0B9424C0A3D3009D40FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B1A0B9324C0A3D3009D40FF /* F100BaiduMapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		23EBC72C318D60AFFF70BB6F /* Pods_CollectionViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollectionViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B038DB324D17BE70027D460 /* FHBuildingDetailShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHBuildingDetailShadowView.h; sourceTree = "<group>"; };
+		2B038DB424D17BE70027D460 /* FHBuildingDetailShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FHBuildingDetailShadowView.m; sourceTree = "<group>"; };
+		2B038DB624D17C2E0027D460 /* DetailCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionViewLayout.h; sourceTree = "<group>"; };
+		2B038DB724D17C2E0027D460 /* DetailCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewLayout.m; sourceTree = "<group>"; };
+		2B038DBD24D2C7FF0027D460 /* DetailSectionTitleCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSectionTitleCollectionView.h; sourceTree = "<group>"; };
+		2B038DBE24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSectionTitleCollectionView.m; sourceTree = "<group>"; };
+		2B038DC024D2CB2D0027D460 /* DetailHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		2B038DC124D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailHeaderCollectionViewCell.m; sourceTree = "<group>"; };
 		2B0592C42481445E006F0B3D /* CollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0592C72481445E006F0B3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B0592C82481445E006F0B3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +80,7 @@
 		2B0592E12484ED37006F0B3D /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		2B0592E32484F928006F0B3D /* BTDWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDWeakProxy.h; sourceTree = "<group>"; };
 		2B0592E42484F928006F0B3D /* BTDWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDWeakProxy.m; sourceTree = "<group>"; };
+		2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = F100BaiduMapKit.framework; sourceTree = "<group>"; };
 		2B34C613249CE483006B921B /* StackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		2B34C614249CE483006B921B /* StackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		2B34C615249CE483006B921B /* StackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackViewController.xib; sourceTree = "<group>"; };
@@ -54,7 +92,24 @@
 		2B34C61F249CE604006B921B /* CoreInfoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreInfoCollectionViewCell.m; sourceTree = "<group>"; };
 		2B34C621249CF3FB006B921B /* CoreInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreInfoModel.h; sourceTree = "<group>"; };
 		2B34C622249CF3FB006B921B /* CoreInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreInfoModel.m; sourceTree = "<group>"; };
+		2B34C624249F91A1006B921B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2B34C625249F91A1006B921B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2B34C627249F91AF006B921B /* DetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionViewCell.h; sourceTree = "<group>"; };
+		2B34C628249F91AF006B921B /* DetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewCell.m; sourceTree = "<group>"; };
+		2B832F3A24C54310008FD142 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2B832F3C24C54316008FD142 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		2B832F3E24C54324008FD142 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2B832F4024C5432E008FD142 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BF8DD6024BCAF6700F1490C /* PanoramaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanoramaViewController.h; sourceTree = "<group>"; };
+		2BF8DD6124BCAF6700F1490C /* PanoramaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanoramaViewController.m; sourceTree = "<group>"; };
+		2BF8DD6324BEFA4F00F1490C /* WASegmentedScrollContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASegmentedScrollContentView.m; sourceTree = "<group>"; };
+		2BF8DD6424BEFA4F00F1490C /* WASegmentedScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASegmentedScrollContentView.h; sourceTree = "<group>"; };
+		2BF8DD6524BEFA4F00F1490C /* WASegmentedScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASegmentedScrollViewController.h; sourceTree = "<group>"; };
+		2BF8DD6624BEFA4F00F1490C /* WASegmentedScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASegmentedScrollViewController.m; sourceTree = "<group>"; };
+		2BF8DD6924BEFDE400F1490C /* WASegmentedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASegmentedController.m; sourceTree = "<group>"; };
+		2BF8DD6A24BEFDE400F1490C /* WASegmentedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASegmentedController.h; sourceTree = "<group>"; };
 		6F7E438E7A9C82276CBD6A51 /* Pods-CollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8A243CE137AE9E529DD0FC6F /* libPods-CollectionViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9745E688CDA27F5166F8671C /* Pods-CollectionViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.release.xcconfig"; path = "Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +118,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BD14B17530BDE6E10497221 /* Pods_CollectionViewDemo.framework in Frameworks */,
+				2B832F4124C5432E008FD142 /* CoreGraphics.framework in Frameworks */,
+				2B832F3F24C54324008FD142 /* libsqlite3.0.tbd in Frameworks */,
+				2B832F3D24C54317008FD142 /* libc++.tbd in Frameworks */,
+				2B832F3B24C54310008FD142 /* libz.tbd in Frameworks */,
+				F305E61417E3A3CE2EAA02EF /* libPods-CollectionViewDemo.a in Frameworks */,
+				2B1A0B9224C0A3D3009D40FF /* F100BaiduMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +172,26 @@
 				2B0592E12484ED37006F0B3D /* NotificationViewController.m */,
 				2B0592E32484F928006F0B3D /* BTDWeakProxy.h */,
 				2B0592E42484F928006F0B3D /* BTDWeakProxy.m */,
+				2B34C624249F91A1006B921B /* DetailViewController.h */,
+				2B34C625249F91A1006B921B /* DetailViewController.m */,
+				2B038DC024D2CB2D0027D460 /* DetailHeaderCollectionViewCell.h */,
+				2B038DC124D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m */,
+				2B038DB624D17C2E0027D460 /* DetailCollectionViewLayout.h */,
+				2B038DB724D17C2E0027D460 /* DetailCollectionViewLayout.m */,
+				2B038DBD24D2C7FF0027D460 /* DetailSectionTitleCollectionView.h */,
+				2B038DBE24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m */,
+				2B34C627249F91AF006B921B /* DetailCollectionViewCell.h */,
+				2B34C628249F91AF006B921B /* DetailCollectionViewCell.m */,
+				2B038DB324D17BE70027D460 /* FHBuildingDetailShadowView.h */,
+				2B038DB424D17BE70027D460 /* FHBuildingDetailShadowView.m */,
+				2BF8DD6024BCAF6700F1490C /* PanoramaViewController.h */,
+				2BF8DD6124BCAF6700F1490C /* PanoramaViewController.m */,
+				2BF8DD6A24BEFDE400F1490C /* WASegmentedController.h */,
+				2BF8DD6924BEFDE400F1490C /* WASegmentedController.m */,
+				2BF8DD6424BEFA4F00F1490C /* WASegmentedScrollContentView.h */,
+				2BF8DD6324BEFA4F00F1490C /* WASegmentedScrollContentView.m */,
+				2BF8DD6524BEFA4F00F1490C /* WASegmentedScrollViewController.h */,
+				2BF8DD6624BEFA4F00F1490C /* WASegmentedScrollViewController.m */,
 				2B0592D02481445E006F0B3D /* Main.storyboard */,
 				2B0592D324814462006F0B3D /* Assets.xcassets */,
 				2B0592D524814462006F0B3D /* LaunchScreen.storyboard */,
@@ -124,7 +204,12 @@
 		F7AB482818979AEFCF1EF991 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				23EBC72C318D60AFFF70BB6F /* Pods_CollectionViewDemo.framework */,
+				2B832F4024C5432E008FD142 /* CoreGraphics.framework */,
+				2B832F3E24C54324008FD142 /* libsqlite3.0.tbd */,
+				2B832F3C24C54316008FD142 /* libc++.tbd */,
+				2B832F3A24C54310008FD142 /* libz.tbd */,
+				2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */,
+				8A243CE137AE9E529DD0FC6F /* libPods-CollectionViewDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,7 +234,8 @@
 				2B0592C02481445E006F0B3D /* Sources */,
 				2B0592C12481445E006F0B3D /* Frameworks */,
 				2B0592C22481445E006F0B3D /* Resources */,
-				67FAC0ACD437D5FCCD7FB479 /* [CP] Embed Pods Frameworks */,
+				2B1A0B9424C0A3D3009D40FF /* Embed Frameworks */,
+				E4166D2C5E54D7DC81F40D4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,23 +293,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67FAC0ACD437D5FCCD7FB479 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B11C0FF33D054788F924C1EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +315,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E4166D2C5E54D7DC81F40D4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,17 +339,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF8DD6724BEFA4F00F1490C /* WASegmentedScrollContentView.m in Sources */,
 				2B0592CF2481445E006F0B3D /* ViewController.m in Sources */,
 				2B0592C92481445E006F0B3D /* AppDelegate.m in Sources */,
+				2B038DB524D17BE70027D460 /* FHBuildingDetailShadowView.m in Sources */,
+				2BF8DD6B24BEFDE400F1490C /* WASegmentedController.m in Sources */,
 				2B34C616249CE483006B921B /* StackViewController.m in Sources */,
 				2B34C623249CF3FB006B921B /* CoreInfoModel.m in Sources */,
+				2B038DB824D17C2E0027D460 /* DetailCollectionViewLayout.m in Sources */,
 				2B34C620249CE605006B921B /* CoreInfoCollectionViewCell.m in Sources */,
 				2B0592DA24814462006F0B3D /* main.m in Sources */,
+				2B038DC224D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m in Sources */,
+				2B038DBF24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m in Sources */,
 				2B0592E52484F928006F0B3D /* BTDWeakProxy.m in Sources */,
 				2B34C61D249CE5DB006B921B /* LeftAlignedCollectionViewFlowLayout.m in Sources */,
 				2B0592E22484ED37006F0B3D /* NotificationViewController.m in Sources */,
+				2BF8DD6824BEFA4F00F1490C /* WASegmentedScrollViewController.m in Sources */,
+				2BF8DD6224BCAF6700F1490C /* PanoramaViewController.m in Sources */,
 				2B0592CC2481445E006F0B3D /* SceneDelegate.m in Sources */,
+				2B34C629249F91AF006B921B /* DetailCollectionViewCell.m in Sources */,
 				2B34C61A249CE5BC006B921B /* CoreInfoViewController.m in Sources */,
+				2B34C626249F91A1006B921B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,13 +502,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7H627GN53;
+				FRAMEWORK_SEARCH_PATHS = "/Users/bytedance/Workspace/Doing/XLNewTechDemo/**";
+				HEADER_SEARCH_PATHS = (
+					"/Users/bytedance/Workspace/Doing/XLNewTechDemo/**",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
+				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.collection.conan.CollectionViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.collectionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,13 +530,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7H627GN53;
+				FRAMEWORK_SEARCH_PATHS = "/Users/bytedance/Workspace/Doing/XLNewTechDemo/**";
+				HEADER_SEARCH_PATHS = (
+					"/Users/bytedance/Workspace/Doing/XLNewTechDemo/**",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
+				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.collection.conan.CollectionViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.collectionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

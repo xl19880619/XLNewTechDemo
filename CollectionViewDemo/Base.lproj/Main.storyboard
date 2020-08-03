@@ -63,6 +63,21 @@
                                     <action selector="pushDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zk1-D5-4Ba"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-s9-56U">
+                                <rect key="frame" x="30" y="352" width="354" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="百度街景">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushPanorama:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LpI-u5-lra"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -74,8 +89,12 @@
                             <constraint firstItem="fuZ-aU-FW3" firstAttribute="trailing" secondItem="eaU-9b-33X" secondAttribute="trailing" id="Z3f-TB-W6X"/>
                             <constraint firstItem="eaU-9b-33X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZNm-uG-apu"/>
                             <constraint firstItem="fuZ-aU-FW3" firstAttribute="leading" secondItem="eaU-9b-33X" secondAttribute="leading" id="dcU-Bu-XB2"/>
+                            <constraint firstItem="OFk-s9-56U" firstAttribute="top" secondItem="Yae-D1-aVK" secondAttribute="bottom" constant="26" id="hSW-j2-OGK"/>
+                            <constraint firstItem="OFk-s9-56U" firstAttribute="height" secondItem="Yae-D1-aVK" secondAttribute="height" id="j5h-W3-uQt"/>
                             <constraint firstItem="Yae-D1-aVK" firstAttribute="height" secondItem="fuZ-aU-FW3" secondAttribute="height" id="odM-RP-ZDe"/>
                             <constraint firstItem="Yae-D1-aVK" firstAttribute="leading" secondItem="fuZ-aU-FW3" secondAttribute="leading" id="qgW-1L-T42"/>
+                            <constraint firstItem="OFk-s9-56U" firstAttribute="centerX" secondItem="Yae-D1-aVK" secondAttribute="centerX" id="rbb-cQ-kCi"/>
+                            <constraint firstItem="OFk-s9-56U" firstAttribute="width" secondItem="Yae-D1-aVK" secondAttribute="width" id="vRb-A2-0fH"/>
                             <constraint firstItem="fuZ-aU-FW3" firstAttribute="height" secondItem="eaU-9b-33X" secondAttribute="height" id="yZs-XD-1rk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

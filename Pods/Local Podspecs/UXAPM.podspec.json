@@ -1,0 +1,32 @@
+{
+  "name": "UXAPM",
+  "version": "0.0.1",
+  "summary": "UXAPM",
+  "description": "UXAPM framework",
+  "homepage": "http://git.xin.com/ios_publib/UXAP",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "Xie Lei": "xielei@xin.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "http://git.xin.com/ios_publib/UXAPM.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "Classes/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "public_header_files": [
+    "Classes/UXAPMAgent.h",
+    "Classes/UXAPMConfig.h"
+  ],
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(SRCROOT)/../CollectionViewDemo/** $(SRCROOT)/../F100BaiduMapKit.framework/**"
+  }
+}
