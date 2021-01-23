@@ -12,7 +12,6 @@
 #import "UXAPMTracker.h"
 #import "UXStartMeasurer.h"
 #import "CoreInfoModel.h"
-#import "BaiduPanoramaView.h"
 
 @implementation UXAPMAgent
 
@@ -24,9 +23,6 @@
     CoreInfoModel *model = [[CoreInfoModel alloc] init];
     model.title = @"";
     NSLog(@"model %@",model);
-    
-    BaiduPanoramaView *view = [[BaiduPanoramaView alloc] init];
-    NSLog(@"view : %@",view);
 }
 
 + (void)setDebugMode:(BOOL)debugMode{

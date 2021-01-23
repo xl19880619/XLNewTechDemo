@@ -21,6 +21,8 @@ NSString *const kBaiduMapAKString = @"h32BfIVTwddG8P68o2gGoCHL";
 //
 //@property (nonatomic, strong) BMKMapManager *mapManager;
 
+@property (nonatomic, strong) UIView *bubbleView;
+
 @end
 
 @implementation PanoramaViewController
@@ -44,6 +46,7 @@ NSString *const kBaiduMapAKString = @"h32BfIVTwddG8P68o2gGoCHL";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    
+    self.view.backgroundColor = [UIColor blueColor];
 //    BaiduPanoramaView *panoramaView = [[BaiduPanoramaView alloc] initWithFrame:self.view.bounds key:kBaiduMapAKString];
 //    panoramaView.delegate = self;
 //    [self.view addSubview:panoramaView];
@@ -52,6 +55,55 @@ NSString *const kBaiduMapAKString = @"h32BfIVTwddG8P68o2gGoCHL";
 //        make.edges.mas_equalTo(UIEdgeInsetsZero);
 //    }];
 //    [self.panoramaView setPanoramaWithLon:84.84804887 lat:45.60301341];
+    
+    NSString *text = @"This is Text";
+    self.bubbleView = [[UIView alloc] init];
+    self.bubbleView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.bubbleView];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.textColor = [UIColor blueColor];
+    label.font = [UIFont systemFontOfSize:16];
+    label.text = text;
+    [label sizeToFit];
+
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, label.frame.size.width + 20, label.frame.size.height + 20) cornerRadius:4];
+    {
+        UIBezierPath *recPath = [UIBezierPath bezierPath];
+        [recPath moveToPoint:CGPointMake((label.frame.size.width + 20)/2 - 5, (label.frame.size.height + 20))];
+        [recPath addLineToPoint:CGPointMake((label.frame.size.width + 20)/2, (label.frame.size.height + 20) + 5)];
+        [recPath addLineToPoint:CGPointMake((label.frame.size.width + 20)/2 + 5, (label.frame.size.height + 20))];
+        [recPath closePath];
+        [path appendPath:recPath];
+    }
+        
+        
+    CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+    layer.fillColor = [UIColor whiteColor].CGColor;
+    layer.path = path.CGPath;
+    [self.bubbleView.layer addSublayer:layer];
+    
+    [self.bubbleView addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(10);
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
+    }];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"detail_map_center_icon"]];
+    [self.bubbleView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.bubbleView);
+        make.bottom.mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+    [self.bubbleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.width.mas_equalTo(label.frame.size.width + 20);
+        make.height.mas_equalTo(label.frame.size.height + 20 + 5 + 20);
+    }];
 }
 
 /*

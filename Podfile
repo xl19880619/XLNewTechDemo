@@ -26,11 +26,11 @@ target 'CollectionViewDemo' do
 #  pod 'BDAlogProtocol','1.1.0-alpha.0'
 #pod 'ByteDanceKit', '3.0.4'
 
-pod 'IQKeyboardManager'
+#pod 'IQKeyboardManager'
 pod 'Masonry'
 #pod 'BaiduMapKit'
 #pod 'BaiduMapKit', :path => './BaiduMapKit' #'5.4.0'
-pod 'UXAPM', :path => "./APM"
+#pod 'UXAPM', :path => "./APM"
 #pod 'XLAccountStore', :path => "#{XLAppliationKitPath}/XLAccountStore"
-pod 'LookinServer', :configurations => ['Debug']
+#pod 'LookinServer'
 end

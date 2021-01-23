@@ -18,6 +18,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic, strong) UIWindow *mainWindow;
 
 @end
 

@@ -12,16 +12,12 @@
 		2B038DBF24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DBE24D2C7FF0027D460 /* DetailSectionTitleCollectionView.m */; };
 		2B038DC224D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B038DC124D2CB2D0027D460 /* DetailHeaderCollectionViewCell.m */; };
 		2B0592C92481445E006F0B3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592C82481445E006F0B3D /* AppDelegate.m */; };
-		2B0592CC2481445E006F0B3D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592CB2481445E006F0B3D /* SceneDelegate.m */; };
 		2B0592CF2481445E006F0B3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592CE2481445E006F0B3D /* ViewController.m */; };
-		2B0592D22481445E006F0B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0592D02481445E006F0B3D /* Main.storyboard */; };
 		2B0592D424814462006F0B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0592D324814462006F0B3D /* Assets.xcassets */; };
 		2B0592D724814462006F0B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0592D524814462006F0B3D /* LaunchScreen.storyboard */; };
 		2B0592DA24814462006F0B3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592D924814462006F0B3D /* main.m */; };
 		2B0592E22484ED37006F0B3D /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E12484ED37006F0B3D /* NotificationViewController.m */; };
 		2B0592E52484F928006F0B3D /* BTDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E42484F928006F0B3D /* BTDWeakProxy.m */; };
-		2B1A0B9224C0A3D3009D40FF /* F100BaiduMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */; };
-		2B1A0B9324C0A3D3009D40FF /* F100BaiduMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B34C616249CE483006B921B /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C614249CE483006B921B /* StackViewController.m */; };
 		2B34C617249CE483006B921B /* StackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B34C615249CE483006B921B /* StackViewController.xib */; };
 		2B34C61A249CE5BC006B921B /* CoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C619249CE5BC006B921B /* CoreInfoViewController.m */; };
@@ -38,22 +34,9 @@
 		2BF8DD6724BEFA4F00F1490C /* WASegmentedScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6324BEFA4F00F1490C /* WASegmentedScrollContentView.m */; };
 		2BF8DD6824BEFA4F00F1490C /* WASegmentedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6624BEFA4F00F1490C /* WASegmentedScrollViewController.m */; };
 		2BF8DD6B24BEFDE400F1490C /* WASegmentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8DD6924BEFDE400F1490C /* WASegmentedController.m */; };
+		D3C87F2C25A35503009B7E05 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C87F2B25A35503009B7E05 /* NavigationController.m */; };
 		F305E61417E3A3CE2EAA02EF /* libPods-CollectionViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A243CE137AE9E529DD0FC6F /* libPods-CollectionViewDemo.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2B1A0B9424C0A3D3009D40FF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2B1A0B9324C0A3D3009D40FF /* F100BaiduMapKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B038DB324D17BE70027D460 /* FHBuildingDetailShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHBuildingDetailShadowView.h; sourceTree = "<group>"; };
@@ -67,11 +50,8 @@
 		2B0592C42481445E006F0B3D /* CollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0592C72481445E006F0B3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B0592C82481445E006F0B3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2B0592CA2481445E006F0B3D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		2B0592CB2481445E006F0B3D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		2B0592CD2481445E006F0B3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2B0592CE2481445E006F0B3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2B0592D12481445E006F0B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B0592D324814462006F0B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B0592D624814462006F0B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B0592D824814462006F0B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +91,8 @@
 		6F7E438E7A9C82276CBD6A51 /* Pods-CollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8A243CE137AE9E529DD0FC6F /* libPods-CollectionViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9745E688CDA27F5166F8671C /* Pods-CollectionViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewDemo.release.xcconfig"; path = "Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D3C87F2A25A35503009B7E05 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		D3C87F2B25A35503009B7E05 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +105,6 @@
 				2B832F3D24C54317008FD142 /* libc++.tbd in Frameworks */,
 				2B832F3B24C54310008FD142 /* libz.tbd in Frameworks */,
 				F305E61417E3A3CE2EAA02EF /* libPods-CollectionViewDemo.a in Frameworks */,
-				2B1A0B9224C0A3D3009D40FF /* F100BaiduMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +134,8 @@
 			children = (
 				2B0592C72481445E006F0B3D /* AppDelegate.h */,
 				2B0592C82481445E006F0B3D /* AppDelegate.m */,
-				2B0592CA2481445E006F0B3D /* SceneDelegate.h */,
-				2B0592CB2481445E006F0B3D /* SceneDelegate.m */,
+				D3C87F2A25A35503009B7E05 /* NavigationController.h */,
+				D3C87F2B25A35503009B7E05 /* NavigationController.m */,
 				2B0592CD2481445E006F0B3D /* ViewController.h */,
 				2B0592CE2481445E006F0B3D /* ViewController.m */,
 				2B34C613249CE483006B921B /* StackViewController.h */,
@@ -192,7 +173,6 @@
 				2BF8DD6324BEFA4F00F1490C /* WASegmentedScrollContentView.m */,
 				2BF8DD6524BEFA4F00F1490C /* WASegmentedScrollViewController.h */,
 				2BF8DD6624BEFA4F00F1490C /* WASegmentedScrollViewController.m */,
-				2B0592D02481445E006F0B3D /* Main.storyboard */,
 				2B0592D324814462006F0B3D /* Assets.xcassets */,
 				2B0592D524814462006F0B3D /* LaunchScreen.storyboard */,
 				2B0592D824814462006F0B3D /* Info.plist */,
@@ -234,8 +214,6 @@
 				2B0592C02481445E006F0B3D /* Sources */,
 				2B0592C12481445E006F0B3D /* Frameworks */,
 				2B0592C22481445E006F0B3D /* Resources */,
-				2B1A0B9424C0A3D3009D40FF /* Embed Frameworks */,
-				E4166D2C5E54D7DC81F40D4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,7 +264,6 @@
 				2B0592D724814462006F0B3D /* LaunchScreen.storyboard in Resources */,
 				2B34C617249CE483006B921B /* StackViewController.xib in Resources */,
 				2B0592D424814462006F0B3D /* Assets.xcassets in Resources */,
-				2B0592D22481445E006F0B3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,23 +292,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E4166D2C5E54D7DC81F40D4B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollectionViewDemo/Pods-CollectionViewDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -345,6 +305,7 @@
 				2B038DB524D17BE70027D460 /* FHBuildingDetailShadowView.m in Sources */,
 				2BF8DD6B24BEFDE400F1490C /* WASegmentedController.m in Sources */,
 				2B34C616249CE483006B921B /* StackViewController.m in Sources */,
+				D3C87F2C25A35503009B7E05 /* NavigationController.m in Sources */,
 				2B34C623249CF3FB006B921B /* CoreInfoModel.m in Sources */,
 				2B038DB824D17C2E0027D460 /* DetailCollectionViewLayout.m in Sources */,
 				2B34C620249CE605006B921B /* CoreInfoCollectionViewCell.m in Sources */,
@@ -356,7 +317,6 @@
 				2B0592E22484ED37006F0B3D /* NotificationViewController.m in Sources */,
 				2BF8DD6824BEFA4F00F1490C /* WASegmentedScrollViewController.m in Sources */,
 				2BF8DD6224BCAF6700F1490C /* PanoramaViewController.m in Sources */,
-				2B0592CC2481445E006F0B3D /* SceneDelegate.m in Sources */,
 				2B34C629249F91AF006B921B /* DetailCollectionViewCell.m in Sources */,
 				2B34C61A249CE5BC006B921B /* CoreInfoViewController.m in Sources */,
 				2B34C626249F91A1006B921B /* DetailViewController.m in Sources */,
@@ -366,14 +326,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B0592D02481445E006F0B3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B0592D12481445E006F0B3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B0592D524814462006F0B3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -512,7 +464,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
 				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +492,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
 				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

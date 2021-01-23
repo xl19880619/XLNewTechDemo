@@ -14,34 +14,10 @@
 #import <Masonry/Masonry.h>
 #import "DetailViewController.h"
 
-@interface DataSharedManager : NSObject
-
-+ (instancetype)sharedManager;
-
-@property (nonatomic, strong) NSArray *data;
-
-@end
-
-@implementation DataSharedManager
-
-+ (instancetype)sharedManager {
-    static DataSharedManager *_sharedManager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedManager = [[DataSharedManager alloc] init];
-    });
-    return _sharedManager;
-}
-
-
-@end
-
 @interface ViewController ()
 
-@property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) UILabel *countdownLabel;
+@property (nonatomic, strong) UIStackView *stackView;
 
-@property (nonatomic) NSInteger seconds;
 @end
 
 @implementation ViewController
@@ -51,139 +27,93 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedString(@"A little change", nil);
     
-//    [DataSharedManager sharedManager].data
-//    [self testGroup];
-
-//    NSMutableArray *houseDataItemsModel = [NSMutableArray array];
-//    [houseDataItemsModel addObjectsFromArray:@[@"1",@"2"]];
-//    NSArray *similarItems = @[@"10",@"11"];
-//    NSRange range = NSMakeRange(10, [similarItems count]);
-//    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
-//    [houseDataItemsModel insertObjects:similarItems atIndexes:indexSet];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        NSLog(@"load data refresh UI");
-//    });
-//
-//    self.countdownLabel = [[UILabel alloc] init];
-//    self.countdownLabel.backgroundColor = [UIColor redColor];
-//    self.countdownLabel.textColor = [UIColor whiteColor];
-//    [self.view addSubview:self.countdownLabel];
-//    [self.countdownLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(self.view);
-//        make.bottom.mas_equalTo(-100);
-//    }];
-//    self.seconds = 60;
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-////        NSLog(@"hello timer:%@",timer);
-//        self.countdownLabel.text = [NSString stringWithFormat:@"seconds: %ld",(long)self.seconds];
-//        self.seconds --;
-//        if (self.seconds <= 0) {
-//            self.seconds = 60;
-//        }
-//    }];
+    self.stackView = [[UIStackView alloc] initWithFrame:self.view.bounds];
+    self.stackView.axis = UILayoutConstraintAxisVertical;
+    self.stackView.distribution = UIStackViewDistributionEqualSpacing;
+    [self.view addSubview:self.stackView];
+    [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(0);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+    }];
     
+    {
+        UIButton *stackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [stackButton addTarget:self action:@selector(pushStack:) forControlEvents:UIControlEventTouchUpInside];
+        stackButton.backgroundColor = [UIColor redColor];
+        [stackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [stackButton setTitle:@"UIStackView" forState:UIControlStateNormal];
+        [self.stackView addArrangedSubview:stackButton];
+        [stackButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.stackView);
+            make.height.mas_equalTo(44);
+        }];
+    }
     
-//    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, <#dispatchQueue#>);
-//    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, <#intervalInSeconds#> * NSEC_PER_SEC, <#leewayInSeconds#> * NSEC_PER_SEC);
-//    dispatch_source_set_event_handler(timer, ^{
-//        <#code to be executed when timer fires#>
-//    });
-//    dispatch_resume(timer);
+    {
+        UIButton *stackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [stackButton addTarget:self action:@selector(pushCoreInfo:) forControlEvents:UIControlEventTouchUpInside];
+        stackButton.backgroundColor = [UIColor blackColor];
+        [stackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [stackButton setTitle:@"CoreInfo" forState:UIControlStateNormal];
+        [self.stackView addArrangedSubview:stackButton];
+        [stackButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.stackView);
+            make.height.mas_equalTo(44);
+        }];
+    }
+    
+    {
+        UIButton *stackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [stackButton addTarget:self action:@selector(pushDetail:) forControlEvents:UIControlEventTouchUpInside];
+        stackButton.backgroundColor = [UIColor yellowColor];
+        [stackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [stackButton setTitle:@"Detail" forState:UIControlStateNormal];
+        [self.stackView addArrangedSubview:stackButton];
+        [stackButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.stackView);
+            make.height.mas_equalTo(44);
+        }];
+    }
+    
+    {
+        UIButton *stackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [stackButton addTarget:self action:@selector(pushPanorama:) forControlEvents:UIControlEventTouchUpInside];
+        stackButton.backgroundColor = [UIColor greenColor];
+        [stackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [stackButton setTitle:@"Panorama" forState:UIControlStateNormal];
+        [self.stackView addArrangedSubview:stackButton];
+        [stackButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.stackView);
+            make.height.mas_equalTo(44);
+        }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    NSLog(@"ViewController viewWillAppear");
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        NSLog(@"ViewController viewWillAppear once");
-//    });
+
 }
 
-- (void)testGroup {
-//    __weak typeof(self) weakSelf = self;
-//    __block NSError *requestError = nil;
-    BOOL error = YES;
-    dispatch_group_t group = dispatch_group_create();
-    
-//    dispatch_group_enter(group);
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        NSLog(@"group 111");
-//        dispatch_group_leave(group);
-//
-//    });
-//
-//    dispatch_group_enter(group);
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//
-//        if (error) {
-//            NSLog(@"group 333");
-//            dispatch_group_leave(group);
-//            return;
-//        }
-//        NSLog(@"group 222");
-//        dispatch_group_leave(group);
-//    });
-    
-    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
-        sleep(5);
-        NSLog(@"group 111");
-    });
-    
-
-    
-    
-    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if (error) {
-            NSLog(@"group 333");
-            return;
-        }
-        NSLog(@"group 222");
-    });
-    
-    dispatch_group_wait(group, 0);
-    
-    NSLog(@"444");
-    
-//    dispatch_group_enter(group);
-//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//
-//        NSLog(@"group 111");
-//        dispatch_group_leave(group);
-//    });
-//
-////    dispatch
-//    dispatch_group_enter(group);
-//    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//
-//        NSLog(@"group 222");
-//        dispatch_group_leave(group);
-//    });
-    
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-
-        NSLog(@"group finished");
-    });
-}
-
-- (IBAction)pushStack:(id)sender {
+- (void)pushStack:(id)sender {
     StackViewController *stackVC = [[StackViewController alloc] initWithNibName:@"StackViewController" bundle:nil];
     [self.navigationController pushViewController:stackVC animated:YES];
 }
 
-- (IBAction)pushCoreInfo:(id)sender {
+- (void)pushCoreInfo:(id)sender {
     CoreInfoViewController *coreInfoVC = [[CoreInfoViewController alloc] init];
     [self.navigationController pushViewController:coreInfoVC animated:YES];
 }
 
-- (IBAction)pushDetail:(id)sender {
+- (void)pushDetail:(id)sender {
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
-- (IBAction)pushPanorama:(id)sender {
+- (void)pushPanorama:(id)sender {
     PanoramaViewController *panoramaVC = [[PanoramaViewController alloc] init];
     [self.navigationController pushViewController:panoramaVC animated:YES];
 }

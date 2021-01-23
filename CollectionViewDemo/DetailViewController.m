@@ -177,4 +177,10 @@
     return CGSizeZero;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *viewControllers = [self.navigationController popToViewController:self.navigationController.viewControllers.firstObject animated:YES];
+    NSLog(@"viewControllers %@",viewControllers);
+}
+
 @end

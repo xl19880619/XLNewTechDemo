@@ -8,6 +8,7 @@
 
 #import "StackViewController.h"
 #import <Masonry/Masonry.h>
+#import "DetailViewController.h"
 
 @interface StackViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *douyinTitleLabel;
@@ -145,7 +146,7 @@
 }
 
 - (void)codeLoginAction {
-    
+    [self.navigationController pushViewController:[[DetailViewController alloc] init] animated:YES];
 }
 
 - (void) douyinLoginAction {

@@ -1,6 +1,0 @@
-framework module UXAPM {
-  umbrella header "UXAPM-umbrella.h"
-
-  export *
-  module * { export * }
-}
