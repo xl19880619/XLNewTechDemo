@@ -56,6 +56,15 @@ NSString *const kBaiduMapAKString = @"h32BfIVTwddG8P68o2gGoCHL";
 //    }];
 //    [self.panoramaView setPanoramaWithLon:84.84804887 lat:45.60301341];
     
+    UITextView *textView = [[UITextView alloc] init];
+    textView.text = @"https://wj.toutiao.com/q/54945/NzQ5P0G4/84e5/#/ \n snssdk1370://webview?url=https%3A%2F%2Fm.99hdf.com%2Fmagic%2Fpage%2Fejs%2F600029bb308ee702ced379a6%3FappType%3Dmanyhouse%26playsinline%3D1&use_wk=0";
+    [self.view addSubview:textView];
+    [textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(100);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(200);
+    }];
+    
     NSString *text = @"This is Text";
     self.bubbleView = [[UIView alloc] init];
     self.bubbleView.backgroundColor = [UIColor clearColor];

@@ -18,6 +18,7 @@
 		2B0592DA24814462006F0B3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592D924814462006F0B3D /* main.m */; };
 		2B0592E22484ED37006F0B3D /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E12484ED37006F0B3D /* NotificationViewController.m */; };
 		2B0592E52484F928006F0B3D /* BTDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0592E42484F928006F0B3D /* BTDWeakProxy.m */; };
+		2B1460E025BEAD0B0083817A /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1460DF25BEAD0B0083817A /* WKWebViewController.m */; };
 		2B34C616249CE483006B921B /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C614249CE483006B921B /* StackViewController.m */; };
 		2B34C617249CE483006B921B /* StackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B34C615249CE483006B921B /* StackViewController.xib */; };
 		2B34C61A249CE5BC006B921B /* CoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C619249CE5BC006B921B /* CoreInfoViewController.m */; };
@@ -60,6 +61,8 @@
 		2B0592E12484ED37006F0B3D /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		2B0592E32484F928006F0B3D /* BTDWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDWeakProxy.h; sourceTree = "<group>"; };
 		2B0592E42484F928006F0B3D /* BTDWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDWeakProxy.m; sourceTree = "<group>"; };
+		2B1460DE25BEAD0B0083817A /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		2B1460DF25BEAD0B0083817A /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		2B1A0B9024C0A3CA009D40FF /* F100BaiduMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = F100BaiduMapKit.framework; sourceTree = "<group>"; };
 		2B34C613249CE483006B921B /* StackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		2B34C614249CE483006B921B /* StackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				2B038DB424D17BE70027D460 /* FHBuildingDetailShadowView.m */,
 				2BF8DD6024BCAF6700F1490C /* PanoramaViewController.h */,
 				2BF8DD6124BCAF6700F1490C /* PanoramaViewController.m */,
+				2B1460DE25BEAD0B0083817A /* WKWebViewController.h */,
+				2B1460DF25BEAD0B0083817A /* WKWebViewController.m */,
 				2BF8DD6A24BEFDE400F1490C /* WASegmentedController.h */,
 				2BF8DD6924BEFDE400F1490C /* WASegmentedController.m */,
 				2BF8DD6424BEFA4F00F1490C /* WASegmentedScrollContentView.h */,
@@ -304,6 +309,7 @@
 				2B0592C92481445E006F0B3D /* AppDelegate.m in Sources */,
 				2B038DB524D17BE70027D460 /* FHBuildingDetailShadowView.m in Sources */,
 				2BF8DD6B24BEFDE400F1490C /* WASegmentedController.m in Sources */,
+				2B1460E025BEAD0B0083817A /* WKWebViewController.m in Sources */,
 				2B34C616249CE483006B921B /* StackViewController.m in Sources */,
 				D3C87F2C25A35503009B7E05 /* NavigationController.m in Sources */,
 				2B34C623249CF3FB006B921B /* CoreInfoModel.m in Sources */,
@@ -464,7 +470,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
 				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +498,7 @@
 					"\"${PODS_ROOT}/Headers/Public/UXAPM\"",
 				);
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

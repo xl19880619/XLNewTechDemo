@@ -13,6 +13,7 @@
 #import "PanoramaViewController.h"
 #import <Masonry/Masonry.h>
 #import "DetailViewController.h"
+#import "WKWebViewController.h"
 
 @interface ViewController ()
 
@@ -35,8 +36,8 @@
     [self.view addSubview:self.stackView];
     [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
-        make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        make.top.mas_equalTo(100);
+        make.bottom.mas_equalTo(-100);
     }];
     
     {
@@ -90,6 +91,19 @@
             make.height.mas_equalTo(44);
         }];
     }
+    
+    {
+        UIButton *stackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [stackButton addTarget:self action:@selector(pushWKWebView:) forControlEvents:UIControlEventTouchUpInside];
+        stackButton.backgroundColor = [UIColor greenColor];
+        [stackButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [stackButton setTitle:@"WKWebView" forState:UIControlStateNormal];
+        [self.stackView addArrangedSubview:stackButton];
+        [stackButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.stackView);
+            make.height.mas_equalTo(44);
+        }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -117,5 +131,11 @@
     PanoramaViewController *panoramaVC = [[PanoramaViewController alloc] init];
     [self.navigationController pushViewController:panoramaVC animated:YES];
 }
+
+- (void)pushWKWebView:(id)sender {
+    WKWebViewController *panoramaVC = [[WKWebViewController alloc] init];
+    [self.navigationController pushViewController:panoramaVC animated:YES];
+}
+
 
 @end
